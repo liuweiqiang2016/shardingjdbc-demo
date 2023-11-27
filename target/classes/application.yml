@@ -1,0 +1,13 @@
+server:
+    port: 8088
+    servlet:
+        context-path: /sharding
+spring:
+    datasource:
+        driver-class-name: org.apache.shardingsphere.driver.ShardingSphereDriver
+        url: jdbc:shardingsphere:classpath:sharding.yaml
+
+mybatis-plus:
+    # 测试环境打印sql
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
